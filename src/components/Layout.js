@@ -7,11 +7,15 @@ import "../fonts/fonts.css";
 
 //components
 import Transition from "../components/Transition";
+import Cursor from "../components/Cursor";
 
 const Layout = (props) => {
   return (
     <ThemeProvider theme={theme}>
-      <Transition {...props}>{props.children}</Transition>
+      {/* <Transition {...props}>
+      </Transition> */}
+      <Cursor />
+      {props.children}
     </ThemeProvider>
   );
 };

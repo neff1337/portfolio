@@ -26,11 +26,26 @@ const Transition = ({ children, location }) => {
   return (
     <AnimatePresence>
       <motion.div
-        key={location.pathname}
+        initial={{
+          opacity: 1,
+        }}
+        enter={{
+          opacity: 1,
+          x: -100,
+        }}
+        exit={{
+          opacity: 0,
+        }}
+        transition={{
+          type: "spring",
+          damping: 10,
+          stiffness: 100,
+        }}
+        /* key={location.pathname}
         variants={variants}
         initial="initial"
         animate="enter"
-        exit="exit"
+        exit="exit" */
       >
         {children}
       </motion.div>

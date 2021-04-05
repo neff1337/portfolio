@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "newproject",
+    title: "neff",
     siteUrl: `https://neff.gtsb.io`,
   },
   plugins: [
@@ -16,12 +16,6 @@ module.exports = {
       resolve: "gatsby-plugin-transition-link",
       options: {
         layout: require.resolve(`./src/components/Layout.js`),
-      },
-    },
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
       },
     },
     {

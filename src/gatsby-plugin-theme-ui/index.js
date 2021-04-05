@@ -4,18 +4,19 @@ export const theme = {
   ...normalize(),
   breakpoints: ["40em", "56em", "64em"],
   colors: {
-    mWhite: "#FFF9FB",
-    mRed: "#E94F37",
-    mGray: "#323633",
-    mDark: "#070707",
+    text: "#FFF9FB",
+    background: "#070707",
+    primary: "#E94F37",
+    gray: "#323633",
 
-    text: "#000",
-    background: "#fff",
-    primary: "#07c",
-    secondary: "#30c",
-    muted: "#f6f6f9",
-    gray: "#dddddf",
-    highlight: "hsla(205, 100%, 40%, 0.125)",
+    modes: {
+      light: {
+        text: "#070707",
+        background: "#FFF9FB",
+        primary: "#E94F37",
+        gray: "#323633",
+      },
+    },
   },
   fonts: {
     body: "Montserrat, sans-serif",
@@ -55,6 +56,13 @@ export const theme = {
       textTransform: "uppercase",
       letterSpacing: "1px",
     },
+    headingItalic: {
+      fontFamily: "Soulmaze-Italic",
+      lineHeight: "heading",
+      fontWeight: "heading",
+      textTransform: "uppercase",
+      letterSpacing: "1px",
+    },
     display: {
       fontFamily: "heading",
       fontWeight: "heading",
@@ -62,24 +70,13 @@ export const theme = {
       fontSize: [5, 6, 7],
     },
   },
-  links: {
-    navLink: {
-      color: "mWhite",
-      textDecoration: "none",
-      textTransform: "uppercase",
-      transition: "all 150ms",
-      fontSize: [0, 1],
-      ":hover,:focus,.active": {
-        color: "mRed",
-      },
-    },
-  },
+  links: {},
   buttons: {
     primary: {
       textTransform: "uppercase",
       fontFamily: "body",
-      color: "mWhite",
-      bg: "mRed",
+      color: "text",
+      bg: "primary",
       p: "5px",
       borderRadius: 0,
     },
@@ -90,8 +87,8 @@ export const theme = {
       width: ["mobW", "tabW", "descW"],
     },
     primaryTittle: {
-      bg: "mWhite",
-      color: "mGray",
+      bg: "text",
+      color: "gray",
       textAlign: "center",
       padding: "2vw",
       mt: "10px",
@@ -103,16 +100,37 @@ export const theme = {
       fontFamily: "body",
       fontWeight: "body",
       lineHeight: "body",
-      bg: "mDark",
-      color: "mWhite",
       minHeight: "100vh",
+
+      //link styles
       "*|*:link, a": {
         color: "inherit",
         textDecoration: "none",
+        textTransform: "uppercase",
+        cursor: "none",
+        transition: "all 150ms easy",
+        ":hover,:focus,.active": {
+          color: "primary",
+        },
+      },
+
+      //cursor styles
+      cursor: "none",
+      ".c--hidden": {
+        opacity: 0,
+      },
+      ".c--clicked": {
+        transform: "translate(-50%, -50%) scale(0.5)",
+        bg: "primary",
+      },
+      ".c--hover": {
+        transform: "translate(-50%, -50%) scale(1.5)",
+        bg: "transparent",
+        border: "1px solid",
       },
     },
     hr: {
-      bg: "mWhite",
+      bg: "text",
       height: "2px",
       border: "0",
       m: "0",
