@@ -14,7 +14,6 @@ function MainPage() {
       <TransitionState>
         {({ transitionStatus, entry, exit }) => (
           <motion.div
-            className="main-menu"
             initial={entry.state}
             animate={
               transitionStatus === "exiting"

@@ -6,16 +6,13 @@ import theme from "../gatsby-plugin-theme-ui/index";
 import "../fonts/fonts.css";
 
 //components
-import Transition from "../components/Transition";
 import Cursor from "../components/Cursor";
 
-const Layout = (props) => {
+const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-      {/* <Transition {...props}>
-      </Transition> */}
       <Cursor />
-      {props.children}
+      {children}
     </ThemeProvider>
   );
 };

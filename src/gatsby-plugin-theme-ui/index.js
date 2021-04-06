@@ -8,15 +8,6 @@ export const theme = {
     background: "#070707",
     primary: "#E94F37",
     gray: "#323633",
-
-    modes: {
-      light: {
-        text: "#070707",
-        background: "#FFF9FB",
-        primary: "#E94F37",
-        gray: "#323633",
-      },
-    },
   },
   fonts: {
     body: "Montserrat, sans-serif",
@@ -63,22 +54,31 @@ export const theme = {
       textTransform: "uppercase",
       letterSpacing: "1px",
     },
-    display: {
-      fontFamily: "heading",
-      fontWeight: "heading",
-      lineHeight: "heading",
-      fontSize: [5, 6, 7],
+  },
+  links: {
+    buttonLight: {
+      color: "text",
+      borderRadius: "4px",
+      py: "15px",
+      px: "30px",
+      transition: "150ms easy",
+      transitionProperty: "all",
+      textAlign: "center",
+      ":hover, :active, :focus": {
+        color: "text",
+      },
     },
   },
-  links: {},
   buttons: {
-    primary: {
+    primary100: {
+      width: "100%",
+      py: "10px",
+      px: 0,
+      bg: "background",
       textTransform: "uppercase",
-      fontFamily: "body",
-      color: "text",
-      bg: "primary",
-      p: "5px",
-      borderRadius: 0,
+      "&:hover": {
+        bg: "gray",
+      },
     },
   },
   cards: {
@@ -97,6 +97,7 @@ export const theme = {
   },
   styles: {
     root: {
+      overflow: "hidden",
       fontFamily: "body",
       fontWeight: "body",
       lineHeight: "body",
@@ -104,14 +105,19 @@ export const theme = {
 
       //link styles
       "*|*:link, a": {
+        zIndex: 2,
         color: "inherit",
         textDecoration: "none",
         textTransform: "uppercase",
         cursor: "none",
-        transition: "all 150ms easy",
+        transition: "150ms easy",
+        transitionProperty: "color",
         ":hover,:focus,.active": {
           color: "primary",
         },
+      },
+      button: {
+        cursor: "none",
       },
 
       //cursor styles
@@ -122,6 +128,7 @@ export const theme = {
       ".c--clicked": {
         transform: "translate(-50%, -50%) scale(0.5)",
         bg: "primary",
+        mixBlendMode: "normal",
       },
       ".c--hover": {
         transform: "translate(-50%, -50%) scale(1.5)",

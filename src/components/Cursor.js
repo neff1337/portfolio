@@ -31,6 +31,7 @@ const Cursor = () => {
 
     const mUp = () => {
       setClick(false);
+      setLinkHover(false);
     };
 
     const mMove = (el) => {
@@ -63,6 +64,7 @@ const Cursor = () => {
 
   return (
     <div
+      id="cursor"
       className={
         "cursor " +
         (hidden ? "c--hidden " : " ") +
@@ -74,16 +76,19 @@ const Cursor = () => {
         top: `${position.y}px`,
       }}
       sx={{
+        display: ["none", "none", "block"],
         width: "20px",
         height: "20px",
         backgroundColor: "text",
         borderRadius: "100%",
         position: "fixed",
+        zIndex: 2,
+        pointerEvents: "none",
+        mixBlendMode: "difference",
         transform: "translate(-50%, -50%)",
         transition: "all 100ms ease",
         transitionProperty: "border, opacity, background-color, transform",
       }}
-      s
     />
   );
 };
