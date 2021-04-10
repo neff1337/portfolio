@@ -18,14 +18,15 @@ module.exports = {
         layout: require.resolve(`./src/components/Layout.js`),
       },
     },
-    {
+    //! DELETED
+    /* {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
         path: "./src/images/",
       },
       __key: "images",
-    },
+    }, */
     {
       resolve: "gatsby-source-filesystem",
       options: {
