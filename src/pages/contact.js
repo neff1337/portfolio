@@ -1,5 +1,15 @@
 import * as React from "react";
-import { Grid, Text, Button, Label, Textarea, Box, Link } from "theme-ui";
+import {
+  Grid,
+  Text,
+  Button,
+  Label,
+  Textarea,
+  Field,
+  Box,
+  Link,
+  Card,
+} from "theme-ui";
 import TransitionLink from "gatsby-plugin-transition-link";
 import { motion } from "framer-motion";
 
@@ -71,6 +81,7 @@ const ContactPage = ({ transitionStatus, entry }) => {
               }}
             >
               <TransitionLink
+                id="navlink"
                 to="/"
                 exit={{
                   length: 0.4,
@@ -101,63 +112,82 @@ const ContactPage = ({ transitionStatus, entry }) => {
                 Contact Page
               </Text>
             </Grid>
+
             <Grid
               sx={{
-                gridTemplateRows: "1fr auto",
+                gridTemplateRows: "auto 1fr auto",
                 bg: "text",
                 color: "background",
                 height: "100vh",
                 p: 1,
               }}
             >
-              <Box>
-                <Label htmlFor="contact">Contact with me</Label>
+              <Card>
+                <Label>Contact with me!</Label>
+                <Field label="Email" name="email" p={1} mb={1} />
+                <Label htmlFor="contact">Your massage:</Label>
                 <Textarea
                   name="contact"
                   id="contact"
                   rows={6}
                   mb={1}
+                  p={1}
                   sx={{
                     resize: "none",
                   }}
                 />
                 <Button variant="primary100">Send</Button>
-              </Box>
-              <Grid
+              </Card>
+              <Box
                 sx={{
-                  gridTemplateColumns: "1fr 1fr 1fr",
-                  gridTemplateRows: "1fr 1fr",
-                  gridGap: "15px",
-                  fontSize: [2, 3],
+                  textAlign: "center",
+                  alignSelf: "center",
+                  color: "gray",
                 }}
               >
-                <IconButton bg="#0088cc" href={"https://t.me/neff1337"}>
-                  <SiTelegram style={{ verticalAlign: "text-top" }} />
-                </IconButton>
-                <IconButton
-                  bg="#e1306c"
-                  href={"https://instagram.com/neff1337"}
+                <p>Or find me on:</p>
+              </Box>
+              <Card>
+                <Grid
+                  sx={{
+                    gridTemplateColumns: "1fr 1fr 1fr",
+                    gridTemplateRows: "1fr 1fr",
+                    gridGap: "15px",
+                    fontSize: [2, 3],
+                    color: "text",
+                    ":hover": {
+                      color: "text",
+                    },
+                  }}
                 >
-                  <SiInstagram style={{ verticalAlign: "text-top" }} />
-                </IconButton>
-                <IconButton bg="#333" href={"https://github.com/neff1337"}>
-                  <SiGithub style={{ verticalAlign: "text-top" }} />
-                </IconButton>
-                <IconButton
-                  bg="#ea4335"
-                  href={
-                    "https://mail.google.com/mail/?view=cm&fs=1&to=dimadebelskiy@gmail.com"
-                  }
-                >
-                  <SiGmail style={{ verticalAlign: "text-top" }} />
-                </IconButton>
-                <IconButton bg="#1769ff">
-                  <SiBehance style={{ verticalAlign: "text-top" }} />
-                </IconButton>
-                <IconButton bg="#ea4c89">
-                  <SiDribbble style={{ verticalAlign: "text-top" }} />
-                </IconButton>
-              </Grid>
+                  <IconButton bg="#0088cc" href={"https://t.me/neff1337"}>
+                    <SiTelegram style={{ verticalAlign: "text-top" }} />
+                  </IconButton>
+                  <IconButton
+                    bg="#e1306c"
+                    href={"https://instagram.com/neff1337"}
+                  >
+                    <SiInstagram style={{ verticalAlign: "text-top" }} />
+                  </IconButton>
+                  <IconButton bg="#333" href={"https://github.com/neff1337"}>
+                    <SiGithub style={{ verticalAlign: "text-top" }} />
+                  </IconButton>
+                  <IconButton
+                    bg="#ea4335"
+                    href={
+                      "https://mail.google.com/mail/?view=cm&fs=1&to=dimadebelskiy@gmail.com"
+                    }
+                  >
+                    <SiGmail style={{ verticalAlign: "text-top" }} />
+                  </IconButton>
+                  <IconButton bg="#1769ff">
+                    <SiBehance style={{ verticalAlign: "text-top" }} />
+                  </IconButton>
+                  <IconButton bg="#ea4c89">
+                    <SiDribbble style={{ verticalAlign: "text-top" }} />
+                  </IconButton>
+                </Grid>
+              </Card>
             </Grid>
           </Grid>
         </motion.div>

@@ -36,6 +36,7 @@ export default function Nav() {
         whileHover={{ x: "1vw" }}
       >
         <TransitionLink
+          id="navlink"
           to="/projects"
           exit={{
             length: 0.4,
@@ -71,6 +72,7 @@ export default function Nav() {
         onMouseLeave={() => handleMouseLeave()}
       >
         <TransitionLink
+          id="navlink"
           to="/about"
           exit={{
             length: 0.4,
@@ -111,6 +113,7 @@ export default function Nav() {
         whileHover={{ x: "-1vw" }}
       >
         <TransitionLink
+          id="navlink"
           to="/contact"
           exit={{
             length: 0.4,

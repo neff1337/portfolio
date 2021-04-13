@@ -5,9 +5,10 @@ export const theme = {
   breakpoints: ["40em", "56em", "64em"],
   colors: {
     text: "#FFF9FB",
-    background: "#070707",
+    background: "#121212", //"#070707",
     primary: "#E94F37",
     gray: "#323633",
+    grayCard: "rgba(255, 255, 255, 0.05)", //"#323633",
   },
   fonts: {
     body: "Montserrat, sans-serif",
@@ -31,7 +32,11 @@ export const theme = {
     descW: "70vw",
   },
   radii: {},
-  shadows: {},
+  shadows: {
+    primary: {
+      boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
+    },
+  },
   text: {
     heading: {
       fontFamily: "heading",
@@ -64,9 +69,6 @@ export const theme = {
       transition: "150ms easy",
       transitionProperty: "all",
       textAlign: "center",
-      ":hover, :active, :focus": {
-        color: "text",
-      },
     },
   },
   buttons: {
@@ -83,16 +85,33 @@ export const theme = {
   },
   cards: {
     primary: {
-      bg: "transparent",
-      width: ["mobW", "tabW", "descW"],
+      padding: 1,
+      borderRadius: 4,
+      boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
+      bg: "grayCard",
     },
-    primaryTittle: {
+    primaryWhite: {
+      padding: 1,
+      borderRadius: 4,
+      boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
+      bg: "transparent",
+    },
+  },
+  badges: {
+    primary: {
+      border: ["2px solid", "5px solid"],
+      borderColor: "text",
+      borderRadius: "50%",
+      p: 0,
+      height: ["15px", "25px"],
+      width: ["15px", "25px"],
+    },
+  },
+  images: {
+    avatar: {
       bg: "text",
-      color: "gray",
-      textAlign: "center",
-      padding: "2vw",
-      mt: "10px",
-      width: ["mobW", "tabW", "descW"],
+      width: ["40px", "60px"],
+      height: ["40px", "60px"],
     },
   },
   styles: {
@@ -102,26 +121,23 @@ export const theme = {
       fontWeight: "body",
       lineHeight: "body",
       minHeight: "100vh",
-
-      //link styles
       "*|*:link, a": {
         zIndex: 2,
         color: "inherit",
         textDecoration: "none",
         textTransform: "uppercase",
-        cursor: "none",
         transition: "150ms easy",
         transitionProperty: "color",
+      },
+      "#navlink": {
         ":hover,:focus,.active": {
           color: "primary",
         },
       },
-      button: {
+      "*, button, cursor, a, *|*:link": {
         cursor: "none",
       },
-
       //cursor styles
-      cursor: "none",
       ".c--hidden": {
         opacity: 0,
       },

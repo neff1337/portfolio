@@ -1711,7 +1711,7 @@ var hoistNonReactStatics = (function (targetComponent, sourceComponent) {
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_args":[["@emotion/react@11.1.5","/home/neff/portfolio"]],"_from":"@emotion/react@11.1.5","_id":"@emotion/react@11.1.5","_inBundle":false,"_integrity":"sha512-xfnZ9NJEv9SU9K2sxXM06lzjK245xSeHRpUh67eARBm3PBHjjKIZlfWZ7UQvD0Obvw6ZKjlC79uHrlzFYpOB/Q==","_location":"/@emotion/react","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"@emotion/react@11.1.5","name":"@emotion/react","escapedName":"@emotion%2freact","scope":"@emotion","rawSpec":"11.1.5","saveSpec":null,"fetchSpec":"11.1.5"},"_requiredBy":["/@theme-ui/color-modes","/@theme-ui/color/@theme-ui/css","/@theme-ui/components","/@theme-ui/core","/@theme-ui/css","/@theme-ui/mdx","/@theme-ui/parse-props","/@theme-ui/theme-provider"],"_resolved":"https://registry.npmjs.org/@emotion/react/-/react-11.1.5.tgz","_spec":"11.1.5","_where":"/home/neff/portfolio","author":{"name":"mitchellhamilton","email":"mitchell@mitchellhamilton.me"},"browser":{"./dist/emotion-react.cjs.js":"./dist/emotion-react.browser.cjs.js","./dist/emotion-react.esm.js":"./dist/emotion-react.browser.esm.js"},"dependencies":{"@babel/runtime":"^7.7.2","@emotion/cache":"^11.1.3","@emotion/serialize":"^1.0.0","@emotion/sheet":"^1.0.1","@emotion/utils":"^1.0.0","@emotion/weak-memoize":"^0.2.5","hoist-non-react-statics":"^3.3.1"},"description":"> Simple styling in React.","devDependencies":{"@babel/core":"^7.7.2","@emotion/css":"11.1.3","@emotion/css-prettifier":"1.0.0","@emotion/server":"11.0.0","@emotion/styled":"11.1.5","@types/react":"^16.9.11","dtslint":"^0.3.0","html-tag-names":"^1.1.2","react":"16.14.0","svg-tag-names":"^1.1.1"},"files":["src","dist","jsx-runtime","jsx-dev-runtime","isolated-hoist-non-react-statics-do-not-use-this-in-your-code","types/*.d.ts","macro.js","macro.d.ts","macro.js.flow"],"license":"MIT","main":"dist/emotion-react.cjs.js","module":"dist/emotion-react.esm.js","name":"@emotion/react","peerDependencies":{"@babel/core":"^7.0.0","react":">=16.8.0"},"peerDependenciesMeta":{"@babel/core":{"optional":true},"@types/react":{"optional":true}},"preconstruct":{"entrypoints":["./index.js","./jsx-runtime.js","./jsx-dev-runtime.js","./isolated-hoist-non-react-statics-do-not-use-this-in-your-code.js"],"umdName":"emotionReact"},"publishConfig":{"access":"public"},"repository":{"type":"git","url":"https://github.com/emotion-js/emotion/tree/master/packages/react"},"scripts":{"test:typescript":"dtslint types"},"sideEffects":false,"types":"types/index.d.ts","umd:main":"dist/emotion-react.umd.min.js","version":"11.1.5"}');
+module.exports = JSON.parse('{"name":"@emotion/react","version":"11.1.5","main":"dist/emotion-react.cjs.js","module":"dist/emotion-react.esm.js","browser":{"./dist/emotion-react.cjs.js":"./dist/emotion-react.browser.cjs.js","./dist/emotion-react.esm.js":"./dist/emotion-react.browser.esm.js"},"types":"types/index.d.ts","files":["src","dist","jsx-runtime","jsx-dev-runtime","isolated-hoist-non-react-statics-do-not-use-this-in-your-code","types/*.d.ts","macro.js","macro.d.ts","macro.js.flow"],"sideEffects":false,"author":"mitchellhamilton <mitchell@mitchellhamilton.me>","license":"MIT","scripts":{"test:typescript":"dtslint types"},"dependencies":{"@babel/runtime":"^7.7.2","@emotion/cache":"^11.1.3","@emotion/serialize":"^1.0.0","@emotion/sheet":"^1.0.1","@emotion/utils":"^1.0.0","@emotion/weak-memoize":"^0.2.5","hoist-non-react-statics":"^3.3.1"},"peerDependencies":{"@babel/core":"^7.0.0","react":">=16.8.0"},"peerDependenciesMeta":{"@babel/core":{"optional":true},"@types/react":{"optional":true}},"devDependencies":{"@babel/core":"^7.7.2","@emotion/css":"11.1.3","@emotion/css-prettifier":"1.0.0","@emotion/server":"11.0.0","@emotion/styled":"11.1.5","@types/react":"^16.9.11","dtslint":"^0.3.0","html-tag-names":"^1.1.2","react":"16.14.0","svg-tag-names":"^1.1.1"},"repository":"https://github.com/emotion-js/emotion/tree/master/packages/react","publishConfig":{"access":"public"},"umd:main":"dist/emotion-react.umd.min.js","preconstruct":{"entrypoints":["./index.js","./jsx-runtime.js","./jsx-dev-runtime.js","./isolated-hoist-non-react-statics-do-not-use-this-in-your-code.js"],"umdName":"emotionReact"}}');
 
 /***/ }),
 
@@ -5175,613 +5175,6 @@ var InitializeColorMode = function InitializeColorMode() {
       __html: noflash
     }
   });
-};
-
-
-//# sourceMappingURL=index.esm.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/@theme-ui/color/dist/index.esm.js":
-/*!********************************************************!*\
-  !*** ./node_modules/@theme-ui/color/dist/index.esm.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "alpha": () => (/* binding */ alpha),
-/* harmony export */   "complement": () => (/* binding */ complement),
-/* harmony export */   "darken": () => (/* binding */ darken),
-/* harmony export */   "desaturate": () => (/* binding */ desaturate),
-/* harmony export */   "getColor": () => (/* binding */ getColor),
-/* harmony export */   "grayscale": () => (/* binding */ grayscale),
-/* harmony export */   "hue": () => (/* binding */ hue),
-/* harmony export */   "invert": () => (/* binding */ invert),
-/* harmony export */   "lighten": () => (/* binding */ lighten),
-/* harmony export */   "lightness": () => (/* binding */ lightness),
-/* harmony export */   "mix": () => (/* binding */ mix),
-/* harmony export */   "rotate": () => (/* binding */ rotate),
-/* harmony export */   "saturate": () => (/* binding */ saturate),
-/* harmony export */   "saturation": () => (/* binding */ saturation),
-/* harmony export */   "shade": () => (/* binding */ shade),
-/* harmony export */   "tint": () => (/* binding */ tint),
-/* harmony export */   "transparentize": () => (/* binding */ transparentize)
-/* harmony export */ });
-/* harmony import */ var polished__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! polished */ "./node_modules/polished/dist/polished.esm.js");
-/* harmony import */ var _theme_ui_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @theme-ui/css */ "./node_modules/@theme-ui/color/node_modules/@theme-ui/css/dist/index.esm.js");
-
-
-
-/**
- * Get color from theme.colors
- */
-
-var getColor = function getColor(theme, color) {
-  if (typeof color === 'object') {
-    color = Array.isArray(color) ? color[0] : color.__default;
-  }
-
-  if (true) {
-    if (color && /^var\(--theme-ui-colors-(.+)\)$/.test(color)) {
-      throw new Error('A CSS property was passed to `getColor`. ' + '`theme.colors` contains CSS custom properties. ' + 'Use `theme.rawColors` instead.');
-    }
-  }
-
-  return (0,_theme_ui_css__WEBPACK_IMPORTED_MODULE_0__.get)(theme, 'rawColors' in theme ? "rawColors." + color : "colors." + color, color);
-};
-/**
- * Darken a color by an amount 0–1
- */
-
-var darken = function darken(c, n) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.darken)(n, getColor(t, c));
-  };
-};
-/**
- * Lighten a color by an amount 0–1
- */
-
-var lighten = function lighten(c, n) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.lighten)(n, getColor(t, c));
-  };
-};
-/**
- * Rotate the hue of a color by an amount 0–360
- */
-
-var rotate = function rotate(c, d) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.adjustHue)(d, getColor(t, c));
-  };
-};
-/**
- * Set the hue of a color to a degree 0–360
- */
-
-var hue = function hue(c, h) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.setHue)(h, getColor(t, c));
-  };
-};
-/**
- * Set the saturation of a color to an amount 0–1
- */
-
-var saturation = function saturation(c, s) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.setSaturation)(s, getColor(t, c));
-  };
-};
-/**
- * Set the lightness of a color to an amount 0–1
- */
-
-var lightness = function lightness(c, l) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.setLightness)(l, getColor(t, c));
-  };
-};
-/**
- * Desaturate a color by an amount 0–1
- */
-
-var desaturate = function desaturate(c, n) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.desaturate)(n, getColor(t, c));
-  };
-};
-/**
- * Saturate a color by an amount 0–1
- */
-
-var saturate = function saturate(c, n) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.saturate)(n, getColor(t, c));
-  };
-};
-/**
- * Shade a color by an amount 0–1
- */
-
-var shade = function shade(c, n) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.shade)(n, getColor(t, c));
-  };
-};
-/**
- * Tint a color by an amount 0–1
- */
-
-var tint = function tint(c, n) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.tint)(n, getColor(t, c));
-  };
-};
-var transparentize = function transparentize(c, n) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.transparentize)(n, getColor(t, c));
-  };
-};
-/**
- * Set the transparency of a color to an amount 0-1
- */
-
-var alpha = function alpha(c, n) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.rgba)(getColor(t, c), n);
-  };
-};
-/**
- * Mix two colors by a specific ratio
- */
-
-var mix = function mix(a, b, n) {
-  if (n === void 0) {
-    n = 0.5;
-  }
-
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.mix)(n, getColor(t, a), getColor(t, b));
-  };
-};
-/**
- * Get the complement of a color
- */
-
-var complement = function complement(c) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.complement)(getColor(t, c));
-  };
-};
-/**
- * Get the inverted color
- */
-
-var invert = function invert(c) {
-  return function (t) {
-    return (0,polished__WEBPACK_IMPORTED_MODULE_1__.invert)(getColor(t, c));
-  };
-};
-/**
- * Desaturate the color to grayscale
- */
-
-var grayscale = function grayscale(c) {
-  return desaturate(c, 1);
-};
-
-
-//# sourceMappingURL=index.esm.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/@theme-ui/color/node_modules/@theme-ui/css/dist/index.esm.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/@theme-ui/color/node_modules/@theme-ui/css/dist/index.esm.js ***!
-  \***********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "THEME_UI_DEFAULT_KEY": () => (/* binding */ THEME_UI_DEFAULT_KEY),
-/* harmony export */   "__internalGetUseRootStyles": () => (/* binding */ __internalGetUseRootStyles),
-/* harmony export */   "css": () => (/* binding */ css),
-/* harmony export */   "defaultBreakpoints": () => (/* binding */ defaultBreakpoints),
-/* harmony export */   "get": () => (/* binding */ get),
-/* harmony export */   "getObjectWithVariants": () => (/* binding */ getObjectWithVariants),
-/* harmony export */   "multiples": () => (/* binding */ multiples),
-/* harmony export */   "scales": () => (/* binding */ scales)
-/* harmony export */ });
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-/**
- * @internal
- * We fall back to `theme.useBodyStyles` when `theme.useRootStyles` is not set.
- */
-function __internalGetUseRootStyles(theme) {
-  if (theme === void 0) {
-    theme = {};
-  }
-
-  var _theme = theme,
-      useRootStyles = _theme.useRootStyles,
-      useBodyStyles = _theme.useBodyStyles;
-  var root = 'useRootStyles' in theme && useRootStyles != null;
-  return {
-    scope: root ? 'html' : 'body',
-    rootStyles: root ? useRootStyles : useBodyStyles
-  };
-}
-
-/**
- * Allows for nested scales with shorthand values
- * @example
- * {
- *   colors: {
- *     primary: { __default: '#00f', light: '#33f' }
- *   }
- * }
- * css({ color: 'primary' }); // { color: '#00f' }
- * css({ color: 'primary.light' }) // { color: '#33f' }
- */
-
-var THEME_UI_DEFAULT_KEY = '__default';
-
-var hasDefault = function hasDefault(x) {
-  return typeof x === 'object' && x !== null && THEME_UI_DEFAULT_KEY in x;
-};
-/**
- * Extracts value under path from a deeply nested object.
- * Used for Themes, variants and Theme UI style objects.
- * Given a path to object with `__default` key, returns the value under that key.
- *
- * @param obj a theme, variant or style object
- * @param path path separated with dots (`.`)
- * @param fallback default value returned if get(obj, path) is not found
- */
-
-
-function get(obj, path, fallback, p, undef) {
-  var pathArray = path && typeof path === 'string' ? path.split('.') : [path];
-
-  for (p = 0; p < pathArray.length; p++) {
-    obj = obj ? obj[pathArray[p]] : undef;
-  }
-
-  if (obj === undef) return fallback;
-  return hasDefault(obj) ? obj[THEME_UI_DEFAULT_KEY] : obj;
-}
-var getObjectWithVariants = function getObjectWithVariants(obj, theme) {
-  if (obj && obj['variant']) {
-    var result = {};
-
-    for (var key in obj) {
-      var x = obj[key];
-
-      if (key === 'variant') {
-        var val = typeof x === 'function' ? x(theme) : x;
-        var variant = getObjectWithVariants(get(theme, val), theme);
-        result = _extends({}, result, variant);
-      } else {
-        result[key] = x;
-      }
-    }
-
-    return result;
-  }
-
-  return obj;
-};
-var defaultBreakpoints = [40, 52, 64].map(function (n) {
-  return n + 'em';
-});
-var defaultTheme = {
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72]
-};
-var aliases = {
-  bg: 'backgroundColor',
-  m: 'margin',
-  mt: 'marginTop',
-  mr: 'marginRight',
-  mb: 'marginBottom',
-  ml: 'marginLeft',
-  mx: 'marginX',
-  my: 'marginY',
-  p: 'padding',
-  pt: 'paddingTop',
-  pr: 'paddingRight',
-  pb: 'paddingBottom',
-  pl: 'paddingLeft',
-  px: 'paddingX',
-  py: 'paddingY'
-};
-var multiples = {
-  marginX: ['marginLeft', 'marginRight'],
-  marginY: ['marginTop', 'marginBottom'],
-  paddingX: ['paddingLeft', 'paddingRight'],
-  paddingY: ['paddingTop', 'paddingBottom'],
-  scrollPaddingX: ['scrollPaddingLeft', 'scrollPaddingRight'],
-  scrollPaddingY: ['scrollPaddingTop', 'scrollPaddingBottom'],
-  size: ['width', 'height']
-};
-var scales = {
-  color: 'colors',
-  backgroundColor: 'colors',
-  borderColor: 'colors',
-  caretColor: 'colors',
-  columnRuleColor: 'colors',
-  opacity: 'opacities',
-  transition: 'transitions',
-  margin: 'space',
-  marginTop: 'space',
-  marginRight: 'space',
-  marginBottom: 'space',
-  marginLeft: 'space',
-  marginX: 'space',
-  marginY: 'space',
-  marginBlock: 'space',
-  marginBlockEnd: 'space',
-  marginBlockStart: 'space',
-  marginInline: 'space',
-  marginInlineEnd: 'space',
-  marginInlineStart: 'space',
-  padding: 'space',
-  paddingTop: 'space',
-  paddingRight: 'space',
-  paddingBottom: 'space',
-  paddingLeft: 'space',
-  paddingX: 'space',
-  paddingY: 'space',
-  paddingBlock: 'space',
-  paddingBlockEnd: 'space',
-  paddingBlockStart: 'space',
-  paddingInline: 'space',
-  paddingInlineEnd: 'space',
-  paddingInlineStart: 'space',
-  scrollPadding: 'space',
-  scrollPaddingTop: 'space',
-  scrollPaddingRight: 'space',
-  scrollPaddingBottom: 'space',
-  scrollPaddingLeft: 'space',
-  scrollPaddingX: 'space',
-  scrollPaddingY: 'space',
-  inset: 'space',
-  insetBlock: 'space',
-  insetBlockEnd: 'space',
-  insetBlockStart: 'space',
-  insetInline: 'space',
-  insetInlineEnd: 'space',
-  insetInlineStart: 'space',
-  top: 'space',
-  right: 'space',
-  bottom: 'space',
-  left: 'space',
-  gridGap: 'space',
-  gridColumnGap: 'space',
-  gridRowGap: 'space',
-  gap: 'space',
-  columnGap: 'space',
-  rowGap: 'space',
-  fontFamily: 'fonts',
-  fontSize: 'fontSizes',
-  fontWeight: 'fontWeights',
-  lineHeight: 'lineHeights',
-  letterSpacing: 'letterSpacings',
-  border: 'borders',
-  borderTop: 'borders',
-  borderRight: 'borders',
-  borderBottom: 'borders',
-  borderLeft: 'borders',
-  borderWidth: 'borderWidths',
-  borderStyle: 'borderStyles',
-  borderRadius: 'radii',
-  borderTopRightRadius: 'radii',
-  borderTopLeftRadius: 'radii',
-  borderBottomRightRadius: 'radii',
-  borderBottomLeftRadius: 'radii',
-  borderTopWidth: 'borderWidths',
-  borderTopColor: 'colors',
-  borderTopStyle: 'borderStyles',
-  borderBottomWidth: 'borderWidths',
-  borderBottomColor: 'colors',
-  borderBottomStyle: 'borderStyles',
-  borderLeftWidth: 'borderWidths',
-  borderLeftColor: 'colors',
-  borderLeftStyle: 'borderStyles',
-  borderRightWidth: 'borderWidths',
-  borderRightColor: 'colors',
-  borderRightStyle: 'borderStyles',
-  borderBlock: 'borders',
-  borderBlockEnd: 'borders',
-  borderBlockEndStyle: 'borderStyles',
-  borderBlockEndWidth: 'borderWidths',
-  borderBlockStart: 'borders',
-  borderBlockStartStyle: 'borderStyles',
-  borderBlockStartWidth: 'borderWidths',
-  borderBlockStyle: 'borderStyles',
-  borderBlockWidth: 'borderWidths',
-  borderEndEndRadius: 'radii',
-  borderEndStartRadius: 'radii',
-  borderInline: 'borders',
-  borderInlineEnd: 'borders',
-  borderInlineEndStyle: 'borderStyles',
-  borderInlineEndWidth: 'borderWidths',
-  borderInlineStart: 'borders',
-  borderInlineStartStyle: 'borderStyles',
-  borderInlineStartWidth: 'borderWidths',
-  borderInlineStyle: 'borderStyles',
-  borderInlineWidth: 'borderWidths',
-  borderStartEndRadius: 'radii',
-  borderStartStartRadius: 'radii',
-  outlineColor: 'colors',
-  boxShadow: 'shadows',
-  textShadow: 'shadows',
-  zIndex: 'zIndices',
-  width: 'sizes',
-  minWidth: 'sizes',
-  maxWidth: 'sizes',
-  height: 'sizes',
-  minHeight: 'sizes',
-  maxHeight: 'sizes',
-  flexBasis: 'sizes',
-  size: 'sizes',
-  blockSize: 'sizes',
-  inlineSize: 'sizes',
-  maxBlockSize: 'sizes',
-  maxInlineSize: 'sizes',
-  minBlockSize: 'sizes',
-  minInlineSize: 'sizes',
-  // svg
-  fill: 'colors',
-  stroke: 'colors'
-};
-
-var positiveOrNegative = function positiveOrNegative(scale, value) {
-  if (typeof value !== 'number' || value >= 0) {
-    if (typeof value === 'string' && value.startsWith('-')) {
-      var valueWithoutMinus = value.substring(1);
-
-      var _n = get(scale, valueWithoutMinus, valueWithoutMinus);
-
-      return "-" + _n;
-    }
-
-    return get(scale, value, value);
-  }
-
-  var absolute = Math.abs(value);
-  var n = get(scale, absolute, absolute);
-  if (typeof n === 'string') return '-' + n;
-  return Number(n) * -1;
-};
-
-var transforms = ['margin', 'marginTop', 'marginRight', 'marginBottom', 'marginLeft', 'marginX', 'marginY', 'marginBlock', 'marginBlockEnd', 'marginBlockStart', 'marginInline', 'marginInlineEnd', 'marginInlineStart', 'top', 'bottom', 'left', 'right'].reduce(function (acc, curr) {
-  var _extends2;
-
-  return _extends({}, acc, (_extends2 = {}, _extends2[curr] = positiveOrNegative, _extends2));
-}, {});
-
-var responsive = function responsive(styles) {
-  return function (theme) {
-    var next = {};
-    var breakpoints = theme && theme.breakpoints || defaultBreakpoints;
-    var mediaQueries = [null].concat(breakpoints.map(function (n) {
-      return "@media screen and (min-width: " + n + ")";
-    }));
-
-    for (var k in styles) {
-      var key = k;
-      var value = styles[key];
-
-      if (typeof value === 'function') {
-        value = value(theme || {});
-      }
-
-      if (value === false || value == null) {
-        continue;
-      }
-
-      if (!Array.isArray(value)) {
-        next[key] = value;
-        continue;
-      }
-
-      for (var i = 0; i < value.slice(0, mediaQueries.length).length; i++) {
-        var media = mediaQueries[i];
-
-        if (!media) {
-          next[key] = value[i];
-          continue;
-        }
-
-        next[media] = next[media] || {};
-        if (value[i] == null) continue;
-        next[media][key] = value[i];
-      }
-    }
-
-    return next;
-  };
-};
-
-var css = function css(args) {
-  if (args === void 0) {
-    args = {};
-  }
-
-  return function (props) {
-    if (props === void 0) {
-      props = {};
-    }
-
-    var theme = _extends({}, defaultTheme, 'theme' in props ? props.theme : props); // insert variant props before responsive styles, so they can be merged
-    // we need to maintain order of the style props, so if a variant is place in the middle
-    // of other props, it will extends its props at that same location order.
-
-
-    var obj = getObjectWithVariants(typeof args === 'function' ? args(theme) : args, theme);
-    var styles = responsive(obj)(theme);
-    var result = {};
-
-    for (var key in styles) {
-      var x = styles[key];
-      var val = typeof x === 'function' ? x(theme) : x;
-
-      if (val && typeof val === 'object') {
-        if (hasDefault(val)) {
-          result[key] = val[THEME_UI_DEFAULT_KEY];
-          continue;
-        } // On type level, val can also be an array here,
-        // but we transform all arrays in `responsive` function.
-
-
-        result[key] = css(val)(theme);
-        continue;
-      }
-
-      var prop = key in aliases ? aliases[key] : key;
-      var scaleName = prop in scales ? scales[prop] : undefined;
-      var scale = scaleName ? theme == null ? void 0 : theme[scaleName] : get(theme, prop, {});
-      var transform = get(transforms, prop, get);
-      var value = transform(scale, val, val);
-
-      if (prop in multiples) {
-        var dirs = multiples[prop];
-
-        for (var i = 0; i < dirs.length; i++) {
-          result[dirs[i]] = value;
-        }
-      } else {
-        result[prop] = value;
-      }
-    }
-
-    return result;
-  };
 };
 
 
@@ -10377,7 +9770,8 @@ var plugins = [{
   name: 'gatsby-plugin-theme-ui',
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-theme-ui/gatsby-ssr */ "./node_modules/gatsby-plugin-theme-ui/gatsby-ssr.js"),
   options: {
-    "plugins": []
+    "plugins": [],
+    "preset": "/src/gatsby-plugin-theme-ui/index"
   }
 }, {
   name: 'gatsby-plugin-image',
@@ -10404,7 +9798,7 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-transition-link/gatsby-ssr */ "./node_modules/gatsby-plugin-transition-link/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "layout": "/home/neff/portfolio/src/components/Layout.js"
+    "layout": "/home/neff/portfolio/portfolio/src/components/Layout.js"
   }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
@@ -12178,7 +11572,7 @@ if (true) {
     Layout = preferDefault(__webpack_require__(/*! ./src/components/Layout.js */ "./src/components/Layout.js"));
   } catch (e) {
     if (e.toString().indexOf(`Error: Cannot find module`) !== -1) {
-      throw new Error(`Couldn't find layout component at "${"/home/neff/portfolio/src/components/Layout.js"}.\n\n` + `Please create layout component in that location or specify path to layout component in gatsby-config.js`);
+      throw new Error(`Couldn't find layout component at "${"/home/neff/portfolio/portfolio/src/components/Layout.js"}.\n\n` + `Please create layout component in that location or specify path to layout component in gatsby-config.js`);
     } else {
       // Logging the error for debugging older browsers as there is no way
       // to wrap the thrown error in a try/catch.
@@ -13146,17 +12540,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "theme": () => (/* binding */ theme),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var polished__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! polished */ "./node_modules/polished/dist/polished.esm.js");
-/* harmony import */ var _theme_ui_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @theme-ui/color */ "./node_modules/@theme-ui/color/dist/index.esm.js");
+/* harmony import */ var polished__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! polished */ "./node_modules/polished/dist/polished.esm.js");
 
-
-const theme = { ...(0,polished__WEBPACK_IMPORTED_MODULE_1__.normalize)(),
+const theme = { ...(0,polished__WEBPACK_IMPORTED_MODULE_0__.normalize)(),
   breakpoints: ["40em", "56em", "64em"],
   colors: {
     text: "#FFF9FB",
-    background: "#070707",
+    background: "#121212",
+    //"#070707",
     primary: "#E94F37",
-    gray: "#323633"
+    gray: "#323633",
+    grayCard: "rgba(255, 255, 255, 0.05)" //"#323633",
+
   },
   fonts: {
     body: "Montserrat, sans-serif",
@@ -13180,7 +12575,11 @@ const theme = { ...(0,polished__WEBPACK_IMPORTED_MODULE_1__.normalize)(),
     descW: "70vw"
   },
   radii: {},
-  shadows: {},
+  shadows: {
+    primary: {
+      boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)"
+    }
+  },
   text: {
     heading: {
       fontFamily: "heading",
@@ -13204,54 +12603,84 @@ const theme = { ...(0,polished__WEBPACK_IMPORTED_MODULE_1__.normalize)(),
       letterSpacing: "1px"
     }
   },
-  links: {},
-  buttons: {
+  links: {
     buttonLight: {
       color: "text",
+      borderRadius: "4px",
       py: "15px",
       px: "30px",
       transition: "150ms easy",
-      transitionProperty: "all"
+      transitionProperty: "all",
+      textAlign: "center"
+    }
+  },
+  buttons: {
+    primary100: {
+      width: "100%",
+      py: "10px",
+      px: 0,
+      bg: "background",
+      textTransform: "uppercase",
+      "&:hover": {
+        bg: "gray"
+      }
     }
   },
   cards: {
     primary: {
-      bg: "transparent",
-      width: ["mobW", "tabW", "descW"]
+      padding: 1,
+      borderRadius: 4,
+      boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
+      bg: "grayCard"
     },
-    primaryTittle: {
+    primaryWhite: {
+      padding: 1,
+      borderRadius: 4,
+      boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
+      bg: "transparent"
+    }
+  },
+  badges: {
+    primary: {
+      border: ["2px solid", "5px solid"],
+      borderColor: "text",
+      borderRadius: "50%",
+      p: 0,
+      height: ["15px", "25px"],
+      width: ["15px", "25px"]
+    }
+  },
+  images: {
+    avatar: {
       bg: "text",
-      color: "gray",
-      textAlign: "center",
-      padding: "2vw",
-      mt: "10px",
-      width: ["mobW", "tabW", "descW"]
+      width: ["40px", "60px"],
+      height: ["40px", "60px"]
     }
   },
   styles: {
     root: {
+      overflow: "hidden",
       fontFamily: "body",
       fontWeight: "body",
       lineHeight: "body",
       minHeight: "100vh",
-      //link styles
       "*|*:link, a": {
         zIndex: 2,
         color: "inherit",
         textDecoration: "none",
         textTransform: "uppercase",
-        cursor: "none",
         transition: "150ms easy",
-        transitionProperty: "color",
+        transitionProperty: "color"
+      },
+      "#navlink": {
         ":hover,:focus,.active": {
           color: "primary"
         }
       },
-      button: {
+      "*, button, cursor, a, *|*:link": {
         cursor: "none"
       },
       //cursor styles
-      cursor: "none",
       ".c--hidden": {
         opacity: 0
       },
@@ -55947,29 +55376,29 @@ var jsx = _theme_ui_core__WEBPACK_IMPORTED_MODULE_0__.jsx;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"data":{"themeUiConfig":{"preset":{},"prismPreset":{}}}}');
+module.exports = JSON.parse('{"data":{"themeUiConfig":{"preset":"/src/gatsby-plugin-theme-ui/index","prismPreset":{}}}}');
 
 /***/ }),
 
 /***/ "react-dom/server":
-/*!************************************************************************!*\
-  !*** external "/home/neff/portfolio/node_modules/react-dom/server.js" ***!
-  \************************************************************************/
+/*!**********************************************************************************!*\
+  !*** external "/home/neff/portfolio/portfolio/node_modules/react-dom/server.js" ***!
+  \**********************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/home/neff/portfolio/node_modules/react-dom/server.js");;
+module.exports = require("/home/neff/portfolio/portfolio/node_modules/react-dom/server.js");;
 
 /***/ }),
 
 /***/ "react":
-/*!*******************************************************************!*\
-  !*** external "/home/neff/portfolio/node_modules/react/index.js" ***!
-  \*******************************************************************/
+/*!*****************************************************************************!*\
+  !*** external "/home/neff/portfolio/portfolio/node_modules/react/index.js" ***!
+  \*****************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/home/neff/portfolio/node_modules/react/index.js");;
+module.exports = require("/home/neff/portfolio/portfolio/node_modules/react/index.js");;
 
 /***/ }),
 

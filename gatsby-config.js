@@ -4,7 +4,12 @@ module.exports = {
     siteUrl: `https://neff.gtsb.io`,
   },
   plugins: [
-    "gatsby-plugin-theme-ui",
+    {
+      resolve: "gatsby-plugin-theme-ui",
+      options: {
+        preset: "/src/gatsby-plugin-theme-ui/index",
+      },
+    },
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",

@@ -38,6 +38,7 @@ const AboutPage = ({ transitionStatus, entry }) => {
               }}
             >
               <TransitionLink
+                id="navlink"
                 to="/"
                 exit={{
                   length: 0.4,
