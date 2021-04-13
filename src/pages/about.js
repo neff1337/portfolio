@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Box, Grid } from "theme-ui";
+/** @jsx jsx */
+import { jsx, Box, Grid } from "theme-ui";
 import TransitionLink from "gatsby-plugin-transition-link";
 import { motion } from "framer-motion";
 import { IoMdArrowDown } from "@react-icons/all-files/io/IoMdArrowDown";

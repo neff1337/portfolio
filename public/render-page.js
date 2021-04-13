@@ -12470,7 +12470,7 @@ const Cursor = () => {
       top: `${position.y}px`
     },
     sx: {
-      display: ["none", "none", "block"],
+      display: ["none", "block", "block"],
       width: "20px",
       height: "20px",
       backgroundColor: "text",
@@ -12652,6 +12652,7 @@ const theme = { ...(0,polished__WEBPACK_IMPORTED_MODULE_0__.normalize)(),
   },
   images: {
     avatar: {
+      borderRadius: 0,
       bg: "text",
       width: ["40px", "60px"],
       height: ["40px", "60px"]

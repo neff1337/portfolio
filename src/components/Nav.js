@@ -35,20 +35,22 @@ export default function Nav() {
         onMouseLeave={() => handleMouseLeave()}
         whileHover={{ x: "1vw" }}
       >
-        <TransitionLink
-          id="navlink"
-          to="/projects"
-          exit={{
-            length: 0.4,
-            state: { x: window.innerWidth, opacity: 0 },
-          }}
-          entry={{
-            delay: 0.4,
-            state: { x: -window.innerWidth },
-          }}
-        >
-          projects
-        </TransitionLink>
+        {typeof window !== `undefined` && (
+          <TransitionLink
+            id="navlink"
+            to="/projects"
+            exit={{
+              length: 0.4,
+              state: { x: window.innerWidth, opacity: 0 },
+            }}
+            entry={{
+              delay: 0.4,
+              state: { x: -window.innerWidth },
+            }}
+          >
+            projects
+          </TransitionLink>
+        )}
       </motion.a>
 
       {/* PROJECT DIVIDER */}
@@ -71,20 +73,22 @@ export default function Nav() {
         onMouseEnter={() => handleMouseEnter()}
         onMouseLeave={() => handleMouseLeave()}
       >
-        <TransitionLink
-          id="navlink"
-          to="/about"
-          exit={{
-            length: 0.4,
-            state: { y: window.innerWidth, opacity: 0 },
-          }}
-          entry={{
-            delay: 0.4,
-            state: { y: -window.innerWidth },
-          }}
-        >
-          neff
-        </TransitionLink>
+        {typeof window !== `undefined` && (
+          <TransitionLink
+            id="navlink"
+            to="/about"
+            exit={{
+              length: 0.4,
+              state: { y: window.innerWidth, opacity: 0 },
+            }}
+            entry={{
+              delay: 0.4,
+              state: { y: -window.innerWidth },
+            }}
+          >
+            neff
+          </TransitionLink>
+        )}
       </motion.a>
 
       {/* CONTACT DIVIDER */}
@@ -112,20 +116,22 @@ export default function Nav() {
         onMouseLeave={() => handleMouseLeave()}
         whileHover={{ x: "-1vw" }}
       >
-        <TransitionLink
-          id="navlink"
-          to="/contact"
-          exit={{
-            length: 0.4,
-            state: { x: -window.innerWidth, opacity: 0 },
-          }}
-          entry={{
-            delay: 0.4,
-            state: { x: window.innerWidth },
-          }}
-        >
-          contact
-        </TransitionLink>
+        {typeof window !== `undefined` && (
+          <TransitionLink
+            id="navlink"
+            to="/contact"
+            exit={{
+              length: 0.4,
+              state: { x: -window.innerWidth, opacity: 0 },
+            }}
+            entry={{
+              delay: 0.4,
+              state: { x: window.innerWidth },
+            }}
+          >
+            contact
+          </TransitionLink>
+        )}
       </motion.a>
     </Grid>
   );

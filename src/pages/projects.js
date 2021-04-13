@@ -1,21 +1,16 @@
 /** @jsx jsx */
-import React, { useState } from "react";
+import { useState } from "react";
 import { jsx, Grid, Text, Box, Card, Flex } from "theme-ui";
 import TransitionLink from "gatsby-plugin-transition-link";
 import { motion } from "framer-motion";
+
 import { IoMdArrowForward } from "@react-icons/all-files/io/IoMdArrowForward";
 
-import AvatarImg from "../components/AvatarImage";
+import AvatarImg from "../components/ProjectsPage/AvatarImage";
 
 function ProjectPage({ transitionStatus, entry }) {
   const [active, setActive] = useState(null);
   const openTab = (e) => setActive(+e.target.dataset.index);
-
-  const items = [
-    { title: "London", content: "London is the capital city of England." },
-    { title: "Paris", content: "Paris is the capital of France." },
-    { title: "Tokyo", content: "Tokyo is the capital of Japan." },
-  ];
 
   const handleMouseEnter = () => {
     const cursor = document.getElementById("cursor");
@@ -129,5 +124,11 @@ const TabContent = ({ title, content }) => (
     <p>{content}</p>
   </Card>
 );
+
+const items = [
+  { title: "London", content: "London is the capital city of England." },
+  { title: "Paris", content: "Paris is the capital of France." },
+  { title: "Tokyo", content: "Tokyo is the capital of Japan." },
+];
 
 export default ProjectPage;

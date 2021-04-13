@@ -1,5 +1,6 @@
-import * as React from "react";
+/** @jsx jsx */
 import {
+  jsx,
   Grid,
   Text,
   Button,
