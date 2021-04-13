@@ -4,10 +4,9 @@ import { useState } from "react";
 import { jsx, Grid, Text, Box, Card, Flex } from "theme-ui";
 import TransitionLink from "gatsby-plugin-transition-link";
 import { motion } from "framer-motion";
-
 import { IoMdArrowForward } from "@react-icons/all-files/io/IoMdArrowForward";
-
 import AvatarImg from "../components/ProjectsPage/AvatarImage";
+import SEO from "../components/SEO";
 
 function ProjectPage({ transitionStatus, entry }) {
   const [active, setActive] = useState(null);
@@ -23,6 +22,7 @@ function ProjectPage({ transitionStatus, entry }) {
   };
   return (
     <>
+      <SEO title="neff - projects" />
       {typeof window !== `undefined` && (
         <motion.div
           initial={entry.state}
@@ -95,7 +95,7 @@ function ProjectPage({ transitionStatus, entry }) {
                 justifyContent: "center",
                 bg: "text",
                 variant: "shadows.primary",
-                width: ["60px", "100px"],
+                width: ["55px", "100px"],
               }}
             >
               {items.map((n, i) => (

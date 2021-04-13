@@ -14,7 +14,7 @@ import {
 } from "theme-ui";
 import TransitionLink from "gatsby-plugin-transition-link";
 import { motion } from "framer-motion";
-
+import SEO from "../components/SEO";
 //icons
 import { IoMdArrowBack } from "@react-icons/all-files/io/IoMdArrowBack";
 import { SiInstagram } from "@react-icons/all-files/si/SiInstagram";
@@ -57,6 +57,7 @@ const ContactPage = ({ transitionStatus, entry }) => {
   };
   return (
     <>
+      <SEO title="neff - contacts" />
       {typeof window !== `undefined` && (
         <motion.div
           initial={entry.state}
@@ -120,7 +121,6 @@ const ContactPage = ({ transitionStatus, entry }) => {
                 gridTemplateRows: "auto 1fr auto",
                 bg: "text",
                 color: "background",
-                height: "100vh",
                 p: 1,
               }}
             >

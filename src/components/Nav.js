@@ -25,6 +25,7 @@ export default function Nav() {
         gridTemplateRows: "1fr",
         alignItems: "center",
         fontSize: [0, 1],
+        gridGap: ["20px", "35px", "50px"],
       }}
     >
       {/* PROJECT LINK */}

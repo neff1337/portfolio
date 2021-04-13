@@ -12503,25 +12503,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var theme_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! theme-ui */ "./node_modules/@theme-ui/theme-provider/dist/index.esm.js");
+/* harmony import */ var theme_ui__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! theme-ui */ "./node_modules/@theme-ui/theme-provider/dist/index.esm.js");
 /* harmony import */ var _gatsby_plugin_theme_ui_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../gatsby-plugin-theme-ui/index */ "./src/gatsby-plugin-theme-ui/index.js");
-/* harmony import */ var _fonts_fonts_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../fonts/fonts.css */ "./src/fonts/fonts.css");
-/* harmony import */ var _fonts_fonts_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_fonts_fonts_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_Cursor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Cursor */ "./src/components/Cursor.js");
- //theme
+/* harmony import */ var _components_Cursor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Cursor */ "./src/components/Cursor.js");
+/* harmony import */ var _fontsource_montserrat_200_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fontsource/montserrat/200.css */ "./node_modules/@fontsource/montserrat/200.css");
+/* harmony import */ var _fontsource_montserrat_200_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fontsource_montserrat_200_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _fontsource_montserrat_400_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fontsource/montserrat/400.css */ "./node_modules/@fontsource/montserrat/400.css");
+/* harmony import */ var _fontsource_montserrat_400_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fontsource_montserrat_400_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _fontsource_josefin_sans_200_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fontsource/josefin-sans/200.css */ "./node_modules/@fontsource/josefin-sans/200.css");
+/* harmony import */ var _fontsource_josefin_sans_200_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fontsource_josefin_sans_200_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _fontsource_josefin_sans_400_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fontsource/josefin-sans/400.css */ "./node_modules/@fontsource/josefin-sans/400.css");
+/* harmony import */ var _fontsource_josefin_sans_400_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fontsource_josefin_sans_400_css__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
- //components
+
+
+
 
 
 
 const Layout = ({
   children
 }) => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(theme_ui__WEBPACK_IMPORTED_MODULE_4__.ThemeProvider, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(theme_ui__WEBPACK_IMPORTED_MODULE_7__.ThemeProvider, {
     theme: _gatsby_plugin_theme_ui_index__WEBPACK_IMPORTED_MODULE_1__.default
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Cursor__WEBPACK_IMPORTED_MODULE_3__.default, null), children);
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Cursor__WEBPACK_IMPORTED_MODULE_2__.default, null), children);
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);
@@ -12555,13 +12562,14 @@ const theme = { ...(0,polished__WEBPACK_IMPORTED_MODULE_0__.normalize)(),
   },
   fonts: {
     body: "Montserrat, sans-serif",
-    heading: "Soulmaze, sans-serif",
+    heading: "Josefin Sans, sans-serif",
     monospace: "Menlo, monospace"
   },
   fontSizes: [12, 18, 22, 36, 48, 72, 86],
   fontWeights: {
     body: 400,
-    heading: 500
+    heading: 200,
+    headingBold: 400
   },
   lineHeights: {
     body: 1.5,
@@ -12583,20 +12591,6 @@ const theme = { ...(0,polished__WEBPACK_IMPORTED_MODULE_0__.normalize)(),
   text: {
     heading: {
       fontFamily: "heading",
-      lineHeight: "heading",
-      fontWeight: "heading",
-      textTransform: "uppercase",
-      letterSpacing: "1px"
-    },
-    headingOutlineItalic: {
-      fontFamily: "Soulmaze-Outline-Italic",
-      lineHeight: "heading",
-      fontWeight: "heading",
-      textTransform: "uppercase",
-      letterSpacing: "1px"
-    },
-    headingItalic: {
-      fontFamily: "Soulmaze-Italic",
       lineHeight: "heading",
       fontWeight: "heading",
       textTransform: "uppercase",
@@ -18109,20 +18103,50 @@ function mitt(all                 ) {
 
 /***/ }),
 
-/***/ "./node_modules/gatsby-plugin-transition-link/style.css":
-/*!**************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-transition-link/style.css ***!
-  \**************************************************************/
+/***/ "./node_modules/@fontsource/josefin-sans/200.css":
+/*!*******************************************************!*\
+  !*** ./node_modules/@fontsource/josefin-sans/200.css ***!
+  \*******************************************************/
 /***/ (() => {
 
 
 
 /***/ }),
 
-/***/ "./src/fonts/fonts.css":
-/*!*****************************!*\
-  !*** ./src/fonts/fonts.css ***!
-  \*****************************/
+/***/ "./node_modules/@fontsource/josefin-sans/400.css":
+/*!*******************************************************!*\
+  !*** ./node_modules/@fontsource/josefin-sans/400.css ***!
+  \*******************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@fontsource/montserrat/200.css":
+/*!*****************************************************!*\
+  !*** ./node_modules/@fontsource/montserrat/200.css ***!
+  \*****************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@fontsource/montserrat/400.css":
+/*!*****************************************************!*\
+  !*** ./node_modules/@fontsource/montserrat/400.css ***!
+  \*****************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-transition-link/style.css":
+/*!**************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-transition-link/style.css ***!
+  \**************************************************************/
 /***/ (() => {
 
 

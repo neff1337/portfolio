@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "neff",
+    author: `Brad Carter`,
+    description: "Neff1337 Portfilio",
     siteUrl: `https://neff.gtsb.io`,
   },
   plugins: [
@@ -23,15 +25,14 @@ module.exports = {
         layout: require.resolve(`./src/components/Layout.js`),
       },
     },
-    //! DELETED
-    /* {
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
         path: "./src/images/",
       },
       __key: "images",
-    }, */
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -46,6 +47,18 @@ module.exports = {
         apiToken: `188f78c707da19071c8e48ca5f4b14`,
         preview: false,
         disableLiveReload: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Neff Portfolio`,
+        short_name: `Neff137`,
+        start_url: `/`,
+        background_color: `#121212`,
+        theme_color: `#E94F37`,
+        display: `standalone`,
+        icon: "src/images/icon.png",
       },
     },
   ],

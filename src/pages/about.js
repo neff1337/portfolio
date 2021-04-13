@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import * as React from "react";
 import { jsx, Box, Grid } from "theme-ui";
-import TransitionLink from "gatsby-plugin-transition-link";
 import { motion } from "framer-motion";
+import SEO from "../components/SEO";
+import TransitionLink from "gatsby-plugin-transition-link";
 import { IoMdArrowDown } from "@react-icons/all-files/io/IoMdArrowDown";
 
 const AboutPage = ({ transitionStatus, entry }) => {
@@ -16,6 +17,7 @@ const AboutPage = ({ transitionStatus, entry }) => {
   };
   return (
     <>
+      <SEO title="neff - about" />
       {typeof window !== `undefined` && (
         <motion.div
           initial={entry.state}
@@ -29,7 +31,6 @@ const AboutPage = ({ transitionStatus, entry }) => {
           <Grid
             sx={{
               gridTemplateRows: "1fr auto",
-              height: "100vh",
             }}
           >
             <p>lsda</p>

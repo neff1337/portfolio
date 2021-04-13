@@ -1,13 +1,11 @@
 import * as React from "react";
-
-//theme
 import { ThemeProvider } from "theme-ui";
 import theme from "../gatsby-plugin-theme-ui/index";
-import "../fonts/fonts.css";
-
-//components
 import Cursor from "../components/Cursor";
-
+import "@fontsource/montserrat/200.css";
+import "@fontsource/montserrat/400.css";
+import "@fontsource/josefin-sans/200.css";
+import "@fontsource/josefin-sans/400.css";
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>

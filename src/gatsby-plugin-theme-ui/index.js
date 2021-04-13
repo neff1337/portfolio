@@ -12,13 +12,14 @@ export const theme = {
   },
   fonts: {
     body: "Montserrat, sans-serif",
-    heading: "Soulmaze, sans-serif",
+    heading: "Josefin Sans, sans-serif",
     monospace: "Menlo, monospace",
   },
-  fontSizes: [12, 18, 22, 36, 48, 72, 86],
+  fontSizes: [12, 18, 22, 36, 48, 72],
   fontWeights: {
     body: 400,
-    heading: 500,
+    heading: 200,
+    headingBold: 400,
   },
   lineHeights: {
     body: 1.5,
@@ -27,9 +28,6 @@ export const theme = {
   space: [0, 15, 30, 50],
   sizes: {
     vh: "70vh",
-    mobW: "90vw",
-    tabW: "80vw",
-    descW: "70vw",
   },
   radii: {},
   shadows: {
@@ -40,20 +38,6 @@ export const theme = {
   text: {
     heading: {
       fontFamily: "heading",
-      lineHeight: "heading",
-      fontWeight: "heading",
-      textTransform: "uppercase",
-      letterSpacing: "1px",
-    },
-    headingOutlineItalic: {
-      fontFamily: "Soulmaze-Outline-Italic",
-      lineHeight: "heading",
-      fontWeight: "heading",
-      textTransform: "uppercase",
-      letterSpacing: "1px",
-    },
-    headingItalic: {
-      fontFamily: "Soulmaze-Italic",
       lineHeight: "heading",
       fontWeight: "heading",
       textTransform: "uppercase",
@@ -121,7 +105,6 @@ export const theme = {
       fontFamily: "body",
       fontWeight: "body",
       lineHeight: "body",
-      minHeight: "100vh",
       "*|*:link, a": {
         zIndex: 2,
         color: "inherit",
