@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import * as React from "react";
 import { useState } from "react";
 import { jsx, Grid, Text, Box, Card, Flex } from "theme-ui";
 import TransitionLink from "gatsby-plugin-transition-link";

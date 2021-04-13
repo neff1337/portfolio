@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import React, { useState, useEffect } from "react"; // eslint-disable-line no-unused-vars
+import { useState, useEffect } from "react"; // eslint-disable-line no-unused-vars
 
 const Cursor = () => {
   const [position, setPosition] = useState({ x: -50, y: -50 });

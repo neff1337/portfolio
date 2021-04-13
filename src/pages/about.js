@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import * as React from "react";
 import { jsx, Box, Grid } from "theme-ui";
 import TransitionLink from "gatsby-plugin-transition-link";
 import { motion } from "framer-motion";
