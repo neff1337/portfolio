@@ -6,8 +6,11 @@ import { motion } from "framer-motion";
 
 import "./AvatarImage.css";
 
+let MotionAvatar = motion(Avatar);
+
 const AvatarImg = ({ src, showBadge, tooltip, click, data }) => {
   const [isAvatarHover, setAvatarHover] = useState(false);
+
   return (
     <Box my={1}>
       <ReactTooltip
@@ -15,42 +18,45 @@ const AvatarImg = ({ src, showBadge, tooltip, click, data }) => {
         type="light"
         effect="solid"
         className="iconsTooltip"
-        offset={{ right: 30 }}
+        offset={{ right: 17 }}
       />
-      <motion.div
-        onHoverStart={() => setAvatarHover(true)}
-        onHoverEnd={() => setAvatarHover(false)}
-        whileHover={{
-          scale: 1.1,
-        }}
-      >
-        <Flex>
-          <Box
-            sx={{
-              bg: isAvatarHover ? "background" : "transparent",
-              width: "10px",
-              borderRadius: "0 10px 10px 0",
-              marginRight: ["0px", "10px"],
-            }}
-          />
-          <Avatar
-            onClick={click}
-            data-index={data}
-            src={src}
-            data-tip={tooltip}
-            sx={{
-              bg: "primary",
-            }}
-          />
-          <Badge
-            variant="primary"
-            sx={{
-              display: showBadge ? "inline-block" : "none",
-              m: "0 0 -5px -15px",
-            }}
-          />
-        </Flex>
-      </motion.div>
+      <Flex>
+        <Box
+          sx={{
+            bg: isAvatarHover ? "background" : "transparent",
+            width: "5px",
+            borderRadius: "0 20px 20px 0",
+            marginRight: ["0px", "10px"],
+            transition: ".5s easy",
+            transitionProperty: "background-color",
+          }}
+        />
+        <MotionAvatar
+          onClick={click}
+          data-index={data}
+          src={src}
+          data-tip={tooltip}
+          sx={{
+            bg: "background",
+          }}
+          initial={{
+            borderRadius: "50%",
+          }}
+          whileHover={{
+            borderRadius: "20px",
+            x: "10px",
+          }}
+          onHoverStart={() => setAvatarHover(true)}
+          onHoverEnd={() => setAvatarHover(false)}
+        />
+        <Badge
+          variant="primary"
+          sx={{
+            display: showBadge ? "inline-block" : "none",
+            m: "0 0 -5px -15px",
+          }}
+        />
+      </Flex>
     </Box>
   );
 };

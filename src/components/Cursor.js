@@ -76,7 +76,7 @@ const Cursor = () => {
         top: `${position.y}px`,
       }}
       sx={{
-        display: ["none", "none", "block"],
+        display: ["none", "block", "block"],
         width: "20px",
         height: "20px",
         backgroundColor: "text",

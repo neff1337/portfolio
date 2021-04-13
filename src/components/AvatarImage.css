@@ -1,0 +1,6 @@
+.iconsTooltip {
+  border-radius: 0 !important;
+  padding-top: 17px !important;
+  padding-bottom: 17px !important;
+  transition-property: top !important;
+}

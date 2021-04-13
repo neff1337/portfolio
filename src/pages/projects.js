@@ -91,6 +91,7 @@ function ProjectPage({ transitionStatus, entry }) {
             </Box>
 
             {/*//! ---- ICONS ---- */}
+
             <Flex
               sx={{
                 gridArea: "icons",

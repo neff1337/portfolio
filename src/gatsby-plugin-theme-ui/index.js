@@ -109,6 +109,7 @@ export const theme = {
   },
   images: {
     avatar: {
+      borderRadius: 0,
       bg: "text",
       width: ["40px", "60px"],
       height: ["40px", "60px"],
