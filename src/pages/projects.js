@@ -127,9 +127,17 @@ const TabContent = ({ title, content }) => (
 );
 
 const items = [
-  { title: "London", content: "London is the capital city of England." },
-  { title: "Paris", content: "Paris is the capital of France." },
-  { title: "Tokyo", content: "Tokyo is the capital of Japan." },
+  { title: "Lorem", content: "Est eiusmod laborum do aute laborum:" },
+  {
+    title: "Impsum",
+    content:
+      "Est labore do ea labore incididunt enim minim eu culpa reprehenderit laboris anim qui ad. Sint sit laborum aute culpa ad consequat non tempor ipsum. Aliqua elit tempor aliquip consequat aliqua id tempor excepteur labore aliqua deserunt. ",
+  },
+  {
+    title: "Dollor",
+    content:
+      "Reprehenderit sunt consequat irure id sint occaecat occaecat amet adipisicing cillum est consectetur. Id sunt pariatur et magna eiusmod exercitation laboris duis voluptate aute aute nulla irure laborum.",
+  },
 ];
 
 export default ProjectPage;
