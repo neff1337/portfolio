@@ -5,10 +5,10 @@ export const theme = {
   breakpoints: ["40em", "56em", "64em"],
   colors: {
     text: "#FFF9FB",
-    background: "#121212", //"#070707",
+    background: "#121212",
     primary: "#E94F37",
     gray: "#323633",
-    grayCard: "rgba(255, 255, 255, 0.05)", //"#323633",
+    grayCard: "rgba(255, 255, 255, 0.05)",
   },
   fonts: {
     body: "Montserrat, sans-serif",
@@ -56,7 +56,7 @@ export const theme = {
     },
   },
   buttons: {
-    primary100: {
+    fullWidth: {
       width: "100%",
       py: "10px",
       px: 0,
@@ -73,12 +73,6 @@ export const theme = {
       borderRadius: 4,
       boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
       bg: "grayCard",
-    },
-    primaryWhite: {
-      padding: 1,
-      borderRadius: 4,
-      boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
-      bg: "transparent",
     },
   },
   badges: {

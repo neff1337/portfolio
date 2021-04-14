@@ -17,7 +17,7 @@ const AboutPage = ({ transitionStatus, entry }) => {
   };
   return (
     <>
-      <SEO title="neff - about" />
+      <SEO title="About" />
       {typeof window !== `undefined` && (
         <motion.div
           initial={entry.state}

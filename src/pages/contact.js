@@ -9,42 +9,13 @@ import {
   Textarea,
   Field,
   Box,
-  Link,
   Card,
 } from "theme-ui";
 import TransitionLink from "gatsby-plugin-transition-link";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
-//icons
 import { IoMdArrowBack } from "@react-icons/all-files/io/IoMdArrowBack";
-import { SiInstagram } from "@react-icons/all-files/si/SiInstagram";
-import { SiTelegram } from "@react-icons/all-files/si/SiTelegram";
-import { SiBehance } from "@react-icons/all-files/si/SiBehance";
-import { SiDribbble } from "@react-icons/all-files/si/SiDribbble";
-import { SiGithub } from "@react-icons/all-files/si/SiGithub";
-import { SiGmail } from "@react-icons/all-files/si/SiGmail";
-
-let MotionButton = motion.custom(Link);
-
-function IconButton({ bg, children, href }) {
-  return (
-    <MotionButton
-      href={href}
-      variant="buttonLight"
-      sx={{
-        bg: bg,
-      }}
-      whileHover={{
-        scale: 1.1,
-      }}
-      whileTap={{
-        scale: 0.9,
-      }}
-    >
-      {children}
-    </MotionButton>
-  );
-}
+import ContactButton from "../components/ContactPage/ContactButtons";
 
 const ContactPage = ({ transitionStatus, entry }) => {
   const handleMouseEnter = () => {
@@ -57,7 +28,7 @@ const ContactPage = ({ transitionStatus, entry }) => {
   };
   return (
     <>
-      <SEO title="neff - contacts" />
+      <SEO title="Contacts" />
       {typeof window !== `undefined` && (
         <motion.div
           initial={entry.state}
@@ -68,19 +39,35 @@ const ContactPage = ({ transitionStatus, entry }) => {
         >
           <Grid
             sx={{
-              gridTemplateColumns: ["1fr", "1fr 1fr"],
+              gridTemplateColumns: ["1fr", "1fr", "1fr 1fr"],
+              gridTemplateRows: [
+                "auto 1fr auto 1fr",
+                "auto 1fr auto 1fr",
+                "1fr 1fr 1fr",
+              ],
+              gridTemplateAreas: [
+                `"nav"
+              "form"
+              "text"
+              "buttons"`,
+                `"nav"
+              "form"
+              "text"
+              "buttons"`,
+                `"nav form" "nav text" "nav buttons"`,
+              ],
+              height: [null, "100vh", "100vh"],
               gap: 0,
-              alignItems: "start",
             }}
           >
             {/* NAVBAR */}
-            <Grid
+            <Box
               sx={{
-                p: [1, 2],
-                gridTemplateColumns: "auto 1fr",
-                gridTemplateRows: "1fr",
-                gap: [1, 2],
+                gridArea: "nav",
+                display: "flex",
                 alignItems: "center",
+                alignSelf: "flex-start",
+                p: [1, 2],
               }}
             >
               <TransitionLink
@@ -106,6 +93,7 @@ const ContactPage = ({ transitionStatus, entry }) => {
               </TransitionLink>
               <Text
                 sx={{
+                  ml: [1, 2],
                   pl: [1, 2],
                   borderLeft: "2px solid",
                   textTransform: "uppercase",
@@ -114,14 +102,13 @@ const ContactPage = ({ transitionStatus, entry }) => {
               >
                 Contact Page
               </Text>
-            </Grid>
-
-            <Grid
+            </Box>
+            <Box
               sx={{
-                gridTemplateRows: "auto 1fr auto",
-                bg: "text",
+                gridArea: "form",
                 color: "background",
-                p: 1,
+                bg: "text",
+                p: "15px",
               }}
             >
               <Card>
@@ -138,59 +125,34 @@ const ContactPage = ({ transitionStatus, entry }) => {
                     resize: "none",
                   }}
                 />
-                <Button variant="primary100">Send</Button>
+                <Button variant="fullWidth">Send</Button>
               </Card>
-              <Box
-                sx={{
-                  textAlign: "center",
-                  alignSelf: "center",
-                  color: "gray",
-                }}
-              >
-                <p>Or find me on:</p>
-              </Box>
+            </Box>
+            <Box
+              sx={{
+                gridArea: "text",
+                color: "background",
+                bg: "text",
+                p: "15px",
+                textAlign: "center",
+                height: "100%",
+                color: "gray",
+              }}
+            >
+              <p>Or find me on:</p>
+            </Box>
+            <Box
+              sx={{
+                gridArea: "buttons",
+                color: "background",
+                bg: "text",
+                p: "15px",
+              }}
+            >
               <Card>
-                <Grid
-                  sx={{
-                    gridTemplateColumns: "1fr 1fr 1fr",
-                    gridTemplateRows: "1fr 1fr",
-                    gridGap: "15px",
-                    fontSize: [2, 3],
-                    color: "text",
-                    ":hover": {
-                      color: "text",
-                    },
-                  }}
-                >
-                  <IconButton bg="#0088cc" href={"https://t.me/neff1337"}>
-                    <SiTelegram style={{ verticalAlign: "text-top" }} />
-                  </IconButton>
-                  <IconButton
-                    bg="#e1306c"
-                    href={"https://instagram.com/neff1337"}
-                  >
-                    <SiInstagram style={{ verticalAlign: "text-top" }} />
-                  </IconButton>
-                  <IconButton bg="#333" href={"https://github.com/neff1337"}>
-                    <SiGithub style={{ verticalAlign: "text-top" }} />
-                  </IconButton>
-                  <IconButton
-                    bg="#ea4335"
-                    href={
-                      "https://mail.google.com/mail/?view=cm&fs=1&to=dimadebelskiy@gmail.com"
-                    }
-                  >
-                    <SiGmail style={{ verticalAlign: "text-top" }} />
-                  </IconButton>
-                  <IconButton bg="#1769ff">
-                    <SiBehance style={{ verticalAlign: "text-top" }} />
-                  </IconButton>
-                  <IconButton bg="#ea4c89">
-                    <SiDribbble style={{ verticalAlign: "text-top" }} />
-                  </IconButton>
-                </Grid>
+                <ContactButton />
               </Card>
-            </Grid>
+            </Box>
           </Grid>
         </motion.div>
       )}

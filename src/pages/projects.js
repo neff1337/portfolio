@@ -22,7 +22,7 @@ function ProjectPage({ transitionStatus, entry }) {
   };
   return (
     <>
-      <SEO title="neff - projects" />
+      <SEO title="Projects" />
       {typeof window !== `undefined` && (
         <motion.div
           initial={entry.state}
