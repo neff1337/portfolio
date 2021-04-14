@@ -9800,6 +9800,25 @@ var plugins = [{
     "plugins": [],
     "layout": "/home/neff/portfolio/portfolio/src/components/Layout.js"
   }
+}, {
+  name: 'gatsby-plugin-manifest',
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
+  options: {
+    "plugins": [],
+    "name": "Neff Portfolio",
+    "short_name": "Neff137",
+    "start_url": "/",
+    "background_color": "#121212",
+    "theme_color": "#E94F37",
+    "display": "standalone",
+    "icon": "src/images/icon.png",
+    "legacy": true,
+    "theme_color_in_head": true,
+    "cache_busting_mode": "query",
+    "crossOrigin": "anonymous",
+    "include_favicon": true,
+    "cacheDigest": "1f878650194295b04a11b3a406cc04c9"
+  }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
@@ -11193,6 +11212,220 @@ exports.onRenderBody = onRenderBody;
 
 /***/ }),
 
+/***/ "./node_modules/gatsby-plugin-manifest/common.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/gatsby-plugin-manifest/common.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _path = _interopRequireDefault(__webpack_require__(/*! path */ "path"));
+
+exports.favicons = [{
+  src: "favicon-32x32.png",
+  sizes: "32x32",
+  type: "image/png"
+}]; // default icons for generating icons
+
+exports.defaultIcons = [{
+  src: "icons/icon-48x48.png",
+  sizes: "48x48",
+  type: "image/png"
+}, {
+  src: "icons/icon-72x72.png",
+  sizes: "72x72",
+  type: "image/png"
+}, {
+  src: "icons/icon-96x96.png",
+  sizes: "96x96",
+  type: "image/png"
+}, {
+  src: "icons/icon-144x144.png",
+  sizes: "144x144",
+  type: "image/png"
+}, {
+  src: "icons/icon-192x192.png",
+  sizes: "192x192",
+  type: "image/png"
+}, {
+  src: "icons/icon-256x256.png",
+  sizes: "256x256",
+  type: "image/png"
+}, {
+  src: "icons/icon-384x384.png",
+  sizes: "384x384",
+  type: "image/png"
+}, {
+  src: "icons/icon-512x512.png",
+  sizes: "512x512",
+  type: "image/png"
+}];
+/**
+ * @param {string} path The generic path to an icon
+ * @param {string} digest The digest of the icon provided in the plugin's options.
+ */
+
+exports.addDigestToPath = function (path, digest, method) {
+  if (method === "name") {
+    var parsedPath = _path.default.parse(path);
+
+    return parsedPath.dir + "/" + parsedPath.name + "-" + digest + parsedPath.ext;
+  }
+
+  if (method === "query") {
+    return path + "?v=" + digest;
+  }
+
+  return path;
+};
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/gatsby-plugin-manifest/gatsby-ssr.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
+
+var _gatsby = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+
+var _common = __webpack_require__(/*! ./common.js */ "./node_modules/gatsby-plugin-manifest/common.js");
+
+var _getManifestPathname = _interopRequireDefault(__webpack_require__(/*! ./get-manifest-pathname */ "./node_modules/gatsby-plugin-manifest/get-manifest-pathname.js")); // TODO: remove for v3
+
+
+var withPrefix = _gatsby.withAssetPrefix || _gatsby.withPrefix;
+
+exports.onRenderBody = function (_ref, _ref2) {
+  var setHeadComponents = _ref.setHeadComponents,
+      _ref$pathname = _ref.pathname,
+      pathname = _ref$pathname === void 0 ? "/" : _ref$pathname;
+  var localize = _ref2.localize,
+      legacy = _ref2.legacy,
+      cacheBusting = _ref2.cache_busting_mode,
+      cacheDigest = _ref2.cacheDigest,
+      icon = _ref2.icon,
+      pluginIcons = _ref2.icons,
+      insertFaviconLinkTag = _ref2.include_favicon,
+      insertMetaTag = _ref2.theme_color_in_head,
+      themeColor = _ref2.theme_color,
+      _ref2$crossOrigin = _ref2.crossOrigin,
+      crossOrigin = _ref2$crossOrigin === void 0 ? "anonymous" : _ref2$crossOrigin; // We use this to build a final array to pass as the argument to setHeadComponents at the end of onRenderBody.
+
+  var headComponents = [];
+  var srcIconExists = !!icon;
+  var icons = pluginIcons || _common.defaultIcons;
+  var manifestFileName = (0, _getManifestPathname.default)(pathname, localize); // If icons were generated, also add a favicon link.
+
+  if (srcIconExists) {
+    if (insertFaviconLinkTag) {
+      _common.favicons.forEach(function (favicon) {
+        headComponents.push( /*#__PURE__*/React.createElement("link", {
+          key: "gatsby-plugin-manifest-icon-link-png",
+          rel: "icon",
+          href: withPrefix((0, _common.addDigestToPath)(favicon.src, cacheDigest, cacheBusting)),
+          type: "image/png"
+        }));
+      });
+
+      if (icon !== null && icon !== void 0 && icon.endsWith(".svg")) {
+        headComponents.push( /*#__PURE__*/React.createElement("link", {
+          key: "gatsby-plugin-manifest-icon-link-svg",
+          rel: "icon",
+          href: withPrefix((0, _common.addDigestToPath)("favicon.svg", cacheDigest, cacheBusting)),
+          type: "image/svg+xml"
+        }));
+      }
+    }
+  } // Add manifest link tag.
+
+
+  headComponents.push( /*#__PURE__*/React.createElement("link", {
+    key: "gatsby-plugin-manifest-link",
+    rel: "manifest",
+    href: (0, _gatsby.withPrefix)("/" + manifestFileName),
+    crossOrigin: crossOrigin
+  })); // The user has an option to opt out of the theme_color meta tag being inserted into the head.
+
+  if (themeColor && insertMetaTag) {
+    headComponents.push( /*#__PURE__*/React.createElement("meta", {
+      key: "gatsby-plugin-manifest-meta",
+      name: "theme-color",
+      content: themeColor
+    }));
+  }
+
+  if (legacy) {
+    icons.forEach(function (icon) {
+      headComponents.push( /*#__PURE__*/React.createElement("link", {
+        key: "gatsby-plugin-manifest-apple-touch-icon-" + icon.sizes,
+        rel: "apple-touch-icon",
+        sizes: icon.sizes,
+        href: withPrefix((0, _common.addDigestToPath)(icon.src, cacheDigest, srcIconExists ? cacheBusting : "none"))
+      }));
+    });
+  }
+
+  setHeadComponents(headComponents);
+  return true;
+};
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-manifest/get-manifest-pathname.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-manifest/get-manifest-pathname.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+/**
+ * Get a manifest filename depending on localized pathname
+ *
+ * @param {string} pathname
+ * @param {Array<{start_url: string, lang: string}>} localizedManifests
+ * @return string
+ */
+
+var _default = function _default(pathname, localizedManifests) {
+  var defaultFilename = "manifest.webmanifest";
+
+  if (!Array.isArray(localizedManifests)) {
+    return defaultFilename;
+  }
+
+  var localizedManifest = localizedManifests.find(function (app) {
+    return pathname.startsWith(app.start_url);
+  });
+
+  if (!localizedManifest) {
+    return defaultFilename;
+  }
+
+  return "manifest_" + localizedManifest.lang + ".webmanifest";
+};
+
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js":
 /*!***************************************************************!*\
   !*** ./node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js ***!
@@ -12565,7 +12798,7 @@ const theme = { ...(0,polished__WEBPACK_IMPORTED_MODULE_0__.normalize)(),
     heading: "Josefin Sans, sans-serif",
     monospace: "Menlo, monospace"
   },
-  fontSizes: [12, 18, 22, 36, 48, 72, 86],
+  fontSizes: [12, 18, 22, 36, 48, 72],
   fontWeights: {
     body: 400,
     heading: 200,
@@ -12577,10 +12810,7 @@ const theme = { ...(0,polished__WEBPACK_IMPORTED_MODULE_0__.normalize)(),
   },
   space: [0, 15, 30, 50],
   sizes: {
-    vh: "70vh",
-    mobW: "90vw",
-    tabW: "80vw",
-    descW: "70vw"
+    vh: "70vh"
   },
   radii: {},
   shadows: {
@@ -12658,7 +12888,6 @@ const theme = { ...(0,polished__WEBPACK_IMPORTED_MODULE_0__.normalize)(),
       fontFamily: "body",
       fontWeight: "body",
       lineHeight: "body",
-      minHeight: "100vh",
       "*|*:link, a": {
         zIndex: 2,
         color: "inherit",

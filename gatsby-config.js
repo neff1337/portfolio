@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: "neff",
-    author: `Brad Carter`,
+    author: "neff1337",
     description: "Neff1337 Portfilio",
-    siteUrl: `https://neff.gtsb.io`,
+    siteUrl: "https://neff.gtsb.io",
+    keywords: "neff",
   },
   plugins: [
     {
