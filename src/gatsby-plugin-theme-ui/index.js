@@ -95,7 +95,6 @@ export const theme = {
   },
   styles: {
     root: {
-      overflow: "hidden",
       fontFamily: "body",
       fontWeight: "body",
       lineHeight: "body",
